@@ -2,22 +2,127 @@
 
 /* ============ Fonts ================== */
 @font-face {
-    font-family: "SegoeUIBlack";
-    src: url("../fonts/seguibl.ttf");
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-Regular.ttf");
 }
 
 
 /* ============= General ================ */
 html, body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* ============= Section Header ========= */
 .header {
-    height: 132px;
+    height: 137px;
+    background: linear-gradient(to bottom, #0B56A6 45px, #FFFFFF 45px);
 }
 
+.header__first-row {
+    height: 45px;
+}
 
+.header__second-row {
+    height: 92px;
+}
+
+.header__top-text {
+    font-family: "Open Sans";
+    color: #FFFFFF;
+    font-size: 13px;
+}
+
+.header__top-menu {
+    padding-right: 50px;
+    padding-top: 14px;
+}
+
+.header__top-menu-list {
+    list-style: none;
+    margin: 0 auto;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.header__top-menu-list > li {
+    padding-right: 40px;
+    letter-spacing: 0.3px;
+}
+
+.header__top-menu-list > li:nth-child(7) {
+    padding-right: 0;
+}
+
+.header__top-menu-link, .header__top-menu-link:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.header__phone {
+    display: flex;
+    flex-direction: row;
+}
+
+.header__phone-number {
+    padding-top: 10px;
+    padding-left: 63px;
+    font-size: 18px;
+}
+
+.header__phone-callback {
+    padding-top: 11px;
+    padding-left: 36px;
+}
+
+.header__phone-callback-link, .header__phone-callback-link:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.header__phone-callback-link > img {
+    margin-right: 7px;
+}
+
+.header__logo {
+    padding-top: 33px;
+}
+
+.header__main-menu {
+    padding-left: 58px;
+    padding-right: 23px;
+    padding-top: 30px;
+}
+
+.header__main-menu-list {
+    list-style: none;
+    margin: 0 auto;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header__main-menu-list > li {
+    text-align: center;
+}
+
+.header__main-menu-link, .header__main-menu-link:visited {
+    color: #0B56A6;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.header__main-menu-pic {
+
+}
+
+.header__account-button {
+    border: 1px solid #ED4432;
+    border-radius: 10px;
+}
 /* ============= Section Slider ========= */
 .slider {
     height: 595px;
