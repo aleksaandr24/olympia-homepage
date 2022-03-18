@@ -28,7 +28,7 @@ html, body {
     height: 92px;
 }
 
-.header__top-text {
+.header__text {
     font-family: "Open Sans";
     color: #FFFFFF;
     font-size: 13px;
@@ -93,7 +93,7 @@ html, body {
 .header__main-menu {
     padding-left: 58px;
     padding-right: 23px;
-    padding-top: 30px;
+    padding-top: 26px;
 }
 
 .header__main-menu-list {
@@ -113,18 +113,43 @@ html, body {
     color: #0B56A6;
     text-decoration: none;
     font-size: 15px;
+    font-weight: 600;
 }
 
 .header__main-menu-pic {
 
 }
 
-.header__account-button {
-    border: 1px solid #ED4432;
-    border-radius: 10px;
+.header__account {
+    padding-top: 25px;
+    padding-left: 10px;
 }
+
+.header__account > a, .header__account > a:visited {
+    text-decoration: none;
+}
+
+.header__account-button {
+    width: 185px;
+    height: 41px;
+    border: 2px solid #ED4432;
+    border-radius: 50px;
+    font-size: 14px;
+    color: #103153;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.9px;
+}
+
+.header__account-button > img {
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
 /* ============= Section Slider ========= */
 .slider {
-    height: 595px;
-    background-color: aquamarine;
+    height: 600px;
+    background-color: #367fa8;
+    background-image: url("../img/slider-background.png");
+    
 }
