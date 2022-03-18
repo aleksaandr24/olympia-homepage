@@ -1,9 +1,5 @@
 .col {
     float: left;
-    padding-left: 15px;
-    padding-right: 15px; 
-    
-    /* outline: 1px solid black;  */
 }
 
 .row:after {
@@ -13,14 +9,13 @@
 }
 
 .row {
-    margin-left: -15px;
-    margin-right: -15px;
+    display: flex;
+    flex-direction: row;
 }
 
 .container {
     margin: 0 auto;
-    margin-top: 5px;
-    padding: 15px;    
+    height: 100%;
 }
 
 .col-12 {
