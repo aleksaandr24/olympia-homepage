@@ -1,6 +1,5 @@
 @import url("grid.css");
 
-/* ============ Fonts ================== */
 @font-face {
     font-family: "OpenSans";
     src: url("../fonts/OpenSans-Regular.ttf");
@@ -16,14 +15,12 @@
     src: url("../fonts/NotoSans-Bold.ttf");
 }
 
-/* ============= General ================ */
 html, body {
-    font-family: "OpenSans", sans-serif;
+    font-family: "OpenSans", Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* ============= Section Header ========= */
 .header {
     height: 137px;
     background: linear-gradient(to bottom, #0B56A6 45px, #FFFFFF 45px);
@@ -73,6 +70,7 @@ html, body {
 .header__phone {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
 }
 
 .header__phone-number {
@@ -81,9 +79,12 @@ html, body {
     font-size: 18px;
 }
 
-.header__phone-callback {
-    padding-top: 11px;
+.header__phone-callback, .header__phone-callback_full {
     padding-left: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .header__phone-callback-link, .header__phone-callback-link:visited {
@@ -151,7 +152,6 @@ html, body {
     margin-right: 5px;
 }
 
-/* ============= Section Slider ========= */
 .slider {
     height: 600px;
     background-color: #367fa8;
@@ -182,7 +182,7 @@ html, body {
 }
 
 .slider__buttons {
-    padding: 46px 31px 0 0;
+    padding: 48px 31px 0 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -216,10 +216,66 @@ html, body {
     text-decoration: none;
 }
 
-/* ============= 768px ========= */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
 
-@media screen and (max-width: 768px) {
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0B56A6;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    margin: 15px;
+}
+
+@media screen and (max-width: 1199px) {
+    .header__top-menu_full {
+        display: none;
+    }
+
+    .header__phone-number {
+        padding-left: 0;
+        padding-right: 10px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .header__phone-callback {
+        padding: 0 0 0 0px;
+    }
+
+    .header__phone-callback div {
+        height: 100%;
+        width: 40px;
+        border-left: 1px solid #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__phone-callback_full, .header__account-col {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
     
+    .header__phone-callback {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 991px) {
     .header__main-menu-wrapper {
         padding: 0;
         display: flex;
@@ -301,5 +357,19 @@ html, body {
 
     .header__main-menu-link.active {
         color: #FFFFFF;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header__top-menu-col {
+        display: none;
+    }
+
+    .header__second-row {
+        padding: 0 10px;
+    }
+
+    .slider {
+        display: none;
     }
 }

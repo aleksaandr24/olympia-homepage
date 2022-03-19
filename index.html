@@ -11,7 +11,27 @@
     <header class="header">
         <div class="container">
             <div class="row header__first-row">
-                <div class="col-lg-8">
+                <div class="col-sm-8 col-md-9 col-lg-0 header__top-menu-col">
+                    <div class="header__top-menu">
+                        <nav>
+                            <ul class="header__top-menu-list header__text">
+                                <li><a class="header__top-menu-link" href="#">Расписание</a></li>
+                                <li><a class="header__top-menu-link" href="#">Цены</a></li>
+                                <li><a class="header__top-menu-link" href="#">Контакты</a></li>
+                                <div class="dropdown">
+                                    <li><a class="header__top-menu-link" href="#">Ещё <img src="img/top-menu-arrow.svg"></a></li>
+                                    <div class="dropdown-content">
+                                        <li><a class="header__top-menu-link" href="#">Акции и новости</a></li>
+                                        <li><a class="header__top-menu-link" href="#">Об Олимпии</a></li>
+                                        <li><a class="header__top-menu-link" href="#">Команда</a></li>
+                                        <li><a class="header__top-menu-link" href="#">Помощь</a></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-8 header__top-menu_full">
                     <div class="header__top-menu">
                         <nav>
                             <ul class="header__top-menu-list header__text">
@@ -26,9 +46,13 @@
                         </nav>
                     </div>
                 </div>
-                <div class="col-lg-4 header__phone">
+                <div class="col-12 col-xs-12 col-sm-4 col-md-3 col-lg-4 header__phone">
                     <div class="header__phone-number header__text">+7 (342) 2-56789-2</div>
-                    <div class="header__phone-callback header__text">
+                    <div class="header__phone-callback">
+                        <div><a class="header__phone-callback-link" href="#"><img src="img/phone.svg"></a></div>
+                        <div><a class="header__phone-callback-link" href="#"><img src="img/user.svg"></a></div>
+                    </div>
+                    <div class="header__phone-callback_full header__text">
                         <a class="header__phone-callback-link" href="#"><img src="img/phone.svg">Обратный звонок</a>
                     </div>
                 </div>
@@ -55,7 +79,7 @@
                         </nav>
                     </div>
                 </div>
-                <div class="col-0 col-sm-0 col-lg-2">
+                <div class="col-lg-2 header__account-col">
                     <div class="header__account header__text">
                         <a href="#"><div class="header__account-button"><img src="img/union.svg">Личный кабинет</div></a>
                     </div>
@@ -80,7 +104,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-sm-6 col-md-5 col-lg-4">
                     <div class="slider__buttons">
                         <a href="#"><div class="slider__button slider__button_inverted">подробнее <img src="img/arrow-left-white.png"></div></a>
                         <a href="#"><div class="slider__button">все акции <img src="img/arrow-left-red.png"></div></a>

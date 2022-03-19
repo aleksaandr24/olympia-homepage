@@ -1,6 +1,5 @@
 "use strict";
 
-// Показать меню при нажатии на кнопку меню в режиме <= 768px
 let menuBtn = document.querySelector('.header__main-menu-button');
 let menu = document.querySelector('.header__main-menu');
 let menuList = document.querySelector('.header__main-menu-list');
