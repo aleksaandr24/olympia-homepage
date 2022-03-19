@@ -99,7 +99,7 @@ html, body {
     padding-top: 33px;
 }
 
-.header__main-menu {
+.header__main-menu-wrapper {
     padding-left: 58px;
     padding-right: 23px;
     padding-top: 26px;
@@ -220,84 +220,86 @@ html, body {
 
 @media screen and (max-width: 768px) {
     
-    .header__main-menu {
+    .header__main-menu-wrapper {
         padding: 0;
         display: flex;
-        justify-content: right;
-    }
-
-    #main-menu__toogle {
-        opacity: 0;
-    }
-
-    .main-menu__button {
-        display: flex;
+        justify-content: flex-end;
         align-items: center;
+    }
+
+    .header__main-menu-button {
+        width: 30px;
+        height: 30px;
         position: relative;
-        top: 20px;
-        left: 20px;
-        width: 26px;
-        height: 26px;
+        z-index: 2;
+        overflow: hidden;
         cursor: pointer;
-        z-index: 1;
     }
 
-    .main-menu__button > span, .main-menu__button > span::before, .main-menu__button > span::after {
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: #616161;
-    }
-
-    .main-menu__button > span::before {
-        content: ' ';
-        top: -8px;
-    }
-
-    .main-menu__button > span::after {
-        content: ' ';
-        top: 8px;
-    }
-
-    .header__main-menu-list {
-        display: block;
+    .header__main-menu-button.active {
         position: fixed;
-        visibility: hidden;
-        top: 0;
-        left: -100%;
-        margin: 0;
-        padding: 80px 0;
-        list-style: none;
-        background-color: #ECEFF1;
-        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
     }
 
-    .header__main-menu-link {
-        display: block;
-        padding: 12px 24px;
+    .header__main-menu-button span {
+        width: 30px;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s;
+        background-color: #0B56A6;
     }
 
-    #main-menu__toogle:checked ~ .main-menu__button > span {
-        transform: rotate(45deg);
+    .header__main-menu-button span:nth-of-type(2) {
+        top: calc(50% - 10px);
     }
 
-    #main-menu__toogle:checked ~ .main-menu__button > span::before {
-        top: 0;
-        transform: rotate(0);
+    .header__main-menu-button span:nth-of-type(3) {
+        top: calc(50% + 10px);
     }
 
-    #main-menu__toogle:checked ~ .main-menu__button > span::after {
-        top: 0;
-        transform: rotate(90deg);
-    }
-
-    #main-menu__toogle:checked ~ .header__main-menu-list {
-        visibility: visible;
-        left: 0;
-    }
-
-    .header__account {
+    .header__main-menu-button.active span:nth-of-type(1) {
         display: none;
+    }
+
+    .header__main-menu-button.active span:nth-of-type(2) {
+        top: 50%;
+        transform: translate(-50%, 0%) rotate(45deg);
+        background-color: #FFFFFF;
+    }
+    
+    .header__main-menu-button.active span:nth-of-type(3) {
+        top: 50%;
+        transform: translate(-50%, 0%) rotate(-45deg);
+        background-color: #FFFFFF;
+    }
+
+    .header__main-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        background-color: #0B56A6;
+        transform: translateX(100%);
+        transition: transform 0.5s;
+    }
+
+    .header__main-menu.active {
+        transform: translateX(0);
+    }
+
+    .header__main-menu-list.active {
+        flex-direction: column;
+    }
+
+    .header__main-menu-list.active > li {
+        margin: 20px 0;
+    }
+
+    .header__main-menu-link.active {
+        color: #FFFFFF;
     }
 }

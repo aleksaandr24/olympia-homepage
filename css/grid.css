@@ -54,6 +54,9 @@
 .col-1 {
     width: 8.33333333%;
 }
+.col-0 {
+    display: none;
+}
 
 
 @media screen and (min-width: 768px) {
