@@ -44,7 +44,7 @@ html, body {
 
 .header__top-menu {
     padding-right: 50px;
-    padding-top: 14px;
+    padding-top: 16px;
 }
 
 .header__top-menu-list {
@@ -88,7 +88,7 @@ html, body {
 }
 
 .header__phone-number {
-    padding-top: 10px;
+    padding-top: 13px;
     padding-left: 63px;
     font-size: 18px;
 }
@@ -208,9 +208,9 @@ html, body {
     margin: 25px 70px 0 0;
     font-family: "OpenSans-Bold";
     font-weight: 900;
-    font-size: 25px;
+    font-size: 27px;
     color: rgba(16,49,83,255);
-    letter-spacing: 4.5px;
+    letter-spacing: 3.5px;
     line-height: 46px;
 }
 
